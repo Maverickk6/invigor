@@ -10,8 +10,8 @@ export default function Layout(props) {
     heading: `text-3xl`,
     paragraph: `p-6 w-2/3 text-center`,
     getAccount: `bg-transparent text-orange-500 font-semibold hover:text-white hover:bg-orange-500 py-2 px-4 border border-orange-600 hover:border-transparent rounded`,
-    formWrapper: `w-1/2 flex flex-col gap-4 bg-gray-200 pt-6 pb-8 pl-8 pr-16 `,
-    haveAccount: `ml-auto mb-12 flex text-right items-center`,
+    formWrapper: `w-1/2 flex flex-col gap-2 bg-gray-200 pt-4 pb-8 pl-8 pr-16 `,
+    haveAccount: `ml-auto mb-2 flex text-right items-center`,
     form: `flex flex-col gap-2 pr-16`,
   };
 

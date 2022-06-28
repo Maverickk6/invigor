@@ -4,7 +4,30 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
+    practice_id: {
+      type: DataTypes.STRING,
+    },
+    street: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    city: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    state: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    zip: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     email: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    phone: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -13,6 +36,10 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
     },
   });
+
+  // Practices.associate = (models) => {
+  //   Practices.hasMany(models.Patient)
+  // }
 
   return Practices;
 };

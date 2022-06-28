@@ -9,7 +9,7 @@ app.use(cors());
 const db = require("./models");
 
 
-const regPracticeRouter = require('./routes/Register')
+const regPracticeRouter = require('./routes/Practices')
 app.use("/registration", regPracticeRouter);
 
 

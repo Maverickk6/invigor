@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "EUIM12345",
-    "database": "invigor-practices",
+    "database": "invigorPractices",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },

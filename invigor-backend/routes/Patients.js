@@ -8,9 +8,9 @@ router.get("/", async (req, res) => {
   res.json(patientsList);
 });
 
-router.get("/:PracticeId", async (req, res) => {
-  const id = req.params.PracticeId;
-  const patient = await Patients.findAll({ where: { PracticeId: PracticeId } });
+router.get("/:practice_id", async (req, res) => {
+  const id = req.params.practice_id;
+  const patient = await Patients.findAll({ where: { practice_id: id } });
   res.json(patient);
 });
 

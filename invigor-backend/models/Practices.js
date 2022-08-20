@@ -8,6 +8,10 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       primaryKey: true,
       allowNull: false,
+      references: {
+        model: 'patients',
+        key: 'practice_id'
+      },
     },
     street: {
       type: DataTypes.STRING,

@@ -6,6 +6,8 @@ const APIContext = createContext();
 export function APIContextProvider({ children }) {
   const [practices, setPractices] = useState([]);
 
+  const [patients, setPatients] = useState([]);
+
   useEffect(() => {
     async function fetchData() {
       const { data } = await axios.get(`http://localhost:3001/practice`);
@@ -14,10 +16,22 @@ export function APIContextProvider({ children }) {
     }
     fetchData();
   }, []);
+
+  useEffect(() => {
+    async function fetchData() {
+      const { data } = await axios.get(`http://localhost:3001/patient`);
+      console.log(data);
+      setPatients(data);
+    }
+    fetchData();
+  }, []);
+
+
   return (
     <APIContext.Provider
       value={{
         practices,
+        patients
       }}
     >
       {children}

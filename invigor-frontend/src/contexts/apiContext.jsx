@@ -9,21 +9,21 @@ export function APIContextProvider({ children }) {
   const [patients, setPatients] = useState([]);
 
   useEffect(() => {
-    async function fetchData() {
+    async function fetchDataPractices() {
       const { data } = await axios.get(`http://localhost:3001/practice`);
       console.log(data);
       setPractices(data);
     }
-    fetchData();
+    fetchDataPractices();
   }, []);
 
   useEffect(() => {
-    async function fetchData() {
+    async function fetchDataPatients() {
       const { data } = await axios.get(`http://localhost:3001/patient`);
       console.log(data);
       setPatients(data);
     }
-    fetchData();
+    fetchDataPatients();
   }, []);
 
 

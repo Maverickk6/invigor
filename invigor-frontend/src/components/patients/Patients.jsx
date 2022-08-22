@@ -14,8 +14,8 @@ function Patients() {
 
   return (
     <>
-      {specific.map((spec) => (
-        <div className="mx-2 flex w-72 p-2 gap-2 bg-[#eee]">
+      {specific.map((spec, key) => (
+        <div key={key} className="mx-2 flex w-72 p-2 gap-2 bg-[#eee]">
           <p>{spec.first_name}</p>
           <p>{spec.last_name}</p>
           <p>{spec.practice_id}</p>
